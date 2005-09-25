@@ -14,6 +14,7 @@ import traceback
 import re
 import string
 import types
+import select
 
 # Import Xlib
 
@@ -30,5 +31,4 @@ print
 print "Welcome to " + version.appName + " v" + version.appVer + "!"
 
 # Create the Display object
-xDisplay = display.Display()
-
+disp = display.Display()
