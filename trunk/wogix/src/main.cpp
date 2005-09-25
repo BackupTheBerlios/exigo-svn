@@ -12,4 +12,5 @@ int main()
 {
 	Display *dpy = XOpenDisplay(ZERO);
 	assert(dpy);
+	printf("Wogix 0.1alpha - Tab manager for Exigo\n");
 };
