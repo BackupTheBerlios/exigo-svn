@@ -15,8 +15,5 @@ install:
 clean:
 	-rm $(OBJECTS)
 
-$(KERNEL): $(OBJECTS) Makefile linker.ld
-	$(LD) $(LDFLAGS) $(OBJECTS) -o $@ -T linker.ld
-
 %.o: %.cpp Makefile
 	$(CPP) $(CPPFLAGS) -c $< -o $@
