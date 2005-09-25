@@ -15,6 +15,7 @@ import re
 import string
 import types
 import select
+import window
 
 # Import Xlib
 
@@ -32,3 +33,6 @@ print "Welcome to " + version.appName + " v" + version.appVer + "!"
 
 # Create the Display object
 disp = display.Display()
+
+# Create our Window
+window = window.Window()
