@@ -14,5 +14,18 @@ int main()
 {
 	Display *dpy = XOpenDisplay(ZERO);
 	assert(dpy);
-	cout<<"Wogix 0.1alpha - Tab manager for Exigo\n";
+	cout << "Wogix 0.1alpha - Tab manager for Exigo\n";
+
+	int blackColor = BlackPixel(dpy, DefaultScreen(dpy));
+	int whiteColor = WhitePixel(dpy, DefaultScreen(dpy));
+
+	Window w = XCreateSimpleWindow(dpy, DefaultRootWindow(dpy), 0, 0, 200, 100, 0, blackColor, blackColor);
+
+	XSelectInput(dpy, w, StructureNotifyMask);
+
+	XMapWindow(dpy, w);
+
+	XFlush(dpy);
+
+	sleep(10);
 };
