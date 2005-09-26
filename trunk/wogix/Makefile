@@ -15,10 +15,11 @@ install:
 
 clean:
 	-rm $(OBJECTS)
+	-rm $(WOGIX)
 
 $(WOGIX): $(OBJECTS) Makefile
 	$(LD) $(OBJECTS) -o $@
 
 %.o: %.cpp Makefile
-	$(CPP) $(CPPFLAGS) $< -o $@ -lX11 -c
+	$(CPP) $(CPPFLAGS) $< -o $@ -lX11
 
