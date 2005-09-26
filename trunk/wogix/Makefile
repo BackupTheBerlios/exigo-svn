@@ -2,7 +2,6 @@ CC=gcc
 CCFLAGS=-Wall -W
 CPP=g++
 CPPFLAGS=-Wall -W
-LD=ld
 AS=nasm
 
 OBJECTS=src/main.o
@@ -18,8 +17,8 @@ clean:
 	-rm $(WOGIX)
 
 $(WOGIX): $(OBJECTS) Makefile
-	$(LD) $(OBJECTS) -o $@
+	$(CPP) $(OBJECTS) -o $@ -lX11
 
 %.o: %.cpp Makefile
-	$(CPP) $(CPPFLAGS) $< -o $@ -lX11
+	$(CPP) $(CPPFLAGS) $< -o $@ -c
 
