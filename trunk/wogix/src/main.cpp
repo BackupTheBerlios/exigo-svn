@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <X11/Xlib.h>
-#include <stdio.h>
 #include <unistd.h>
 #include <assert.h>
+#include <iostream>
+
+using namespace std;
 
 #define ZERO (0)
 
@@ -12,5 +14,5 @@ int main()
 {
 	Display *dpy = XOpenDisplay(ZERO);
 	assert(dpy);
-	printf("Wogix 0.1alpha - Tab manager for Exigo\n");
+	cout<<"Wogix 0.1alpha - Tab manager for Exigo\n";
 };

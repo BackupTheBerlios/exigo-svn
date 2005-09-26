@@ -6,18 +6,15 @@ LD=ld
 AS=nasm
 
 OBJECTS=src/main.o
-BIN=src/wogix
 
-all: $(OBJECTS) link
+all: $(OBJECTS)
 
 install:
 	-echo "error: 'make install' not defined."
 
 clean:
-	-rm $(OBJECTS) $(BIN)
+	-rm $(OBJECTS)
 
 %.o: %.cpp Makefile
 	$(CPP) $(CPPFLAGS) $< -o $@ -lX11
 
-link:
-	$(LD) -o $(BIN) $(OBJECTS)
