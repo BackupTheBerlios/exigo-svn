@@ -20,5 +20,5 @@ $(WOGIX): $(OBJECTS) Makefile
 	$(LD) $(OBJECTS) -o $@
 
 %.o: %.cpp Makefile
-	$(CPP) $(CPPFLAGS) $< -o $@ -lX11
+	$(CPP) $(CPPFLAGS) $< -o $@ -lX11 -c
 
